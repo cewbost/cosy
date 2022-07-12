@@ -1,0 +1,3 @@
+# libcosy
+
+C++ library
