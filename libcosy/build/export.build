@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libcosy/
+}
+
+export $out_root/libcosy/$import.target
