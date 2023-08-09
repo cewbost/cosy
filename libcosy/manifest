@@ -12,3 +12,4 @@ email: bostrom.ce@gmail.com
 depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
 #depends: libhello ^1.0.0
+depends: catch2 ~3.3.2

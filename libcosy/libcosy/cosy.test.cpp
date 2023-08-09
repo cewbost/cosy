@@ -1,11 +1,8 @@
 #include <iostream>
 
 #include <libcosy/cosy.hpp>
+#include <catch2/catch_test_macros.hpp>
 
-#undef NDEBUG
-#include <cassert>
-
-int main ()
-{
-
+TEST_CASE("test", "[test]") {
+  REQUIRE(true);
 }
