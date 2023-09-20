@@ -4,7 +4,7 @@ impl_libs = # Implementation dependencies.
 
 import test_libs = catch2%liba{catch2wmain}
 
-./: lib{cosy}: libul{cosy}: {hxx ixx txx cxx}{** -**.test... -version} \
+./: lib{cosy}: libul{cosy}: {hxx ixx txx cxx}{** -**.test... -version -***/mock/**} \
   hxx{version} $impl_libs $intf_libs
 
 # Unit tests.
@@ -21,6 +21,7 @@ for t: cxx{**.test...}
   n = $name($t)...
 
   ./: $d/exe{$n}: $t $d/{hxx ixx txx}{+$n} $d/testscript{+$n} $test_libs
+  $d/exe{$n}: $d/mock/{hxx ixx txx cxx}{**}
   $d/exe{$n}: libul{cosy}: bin.whole = false
 }
 
